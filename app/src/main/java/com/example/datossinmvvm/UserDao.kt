@@ -14,5 +14,10 @@ interface UserDao {
     @Insert
     suspend fun insert(user: User)
 
+    @androidx.room.Delete
+    suspend fun delete(user: User)
+
+    @Query("SELECT * FROM User ORDER BY uid DESC LIMIT 1")
+    suspend fun getLastUser(): User
 }
 
