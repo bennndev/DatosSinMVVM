@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ClientesScreen(database: ClienteDatabase) {
+fun ScreenCliente(database: ClienteDatabase) {
     var clientes by remember { mutableStateOf<List<Cliente>>(emptyList()) }
     var totalClientes by remember { mutableStateOf(0) }
     var showDialog by remember { mutableStateOf(false) }

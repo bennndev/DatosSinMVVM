@@ -1,33 +1,39 @@
 package com.example.datossinmvvm
 
-import ScreenUser
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.room.Room
+import com.example.datossinmvvm.data.client.ClienteDatabase
 import com.example.datossinmvvm.ui.theme.DatosSinMVVMTheme
+import com.example.datossinmvvm.ui.theme.screens.client.ScreenCliente
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var database: ClienteDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
+        database = Room.databaseBuilder(
+            applicationContext,
+            ClienteDatabase::class.java,
+            "cliente_database"
+        ).build()
+
         setContent {
             DatosSinMVVMTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ScreenUser(
-                        modifier = Modifier.padding(innerPadding)
-                    ) //
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    ScreenCliente(database)
                 }
             }
         }
     }
 }
-
-
