@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.room.Room
-import com.example.datossinmvvm.data.client.ClienteDatabase
+import com.example.datossinmvvm.data.database.ClienteDatabase
 import com.example.datossinmvvm.ui.theme.DatosSinMVVMTheme
 import com.example.datossinmvvm.ui.theme.screens.client.ScreenCliente
 

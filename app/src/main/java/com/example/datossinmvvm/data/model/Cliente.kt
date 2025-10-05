@@ -1,4 +1,4 @@
-package com.example.datossinmvvm.data.client
+package com.example.datossinmvvm.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

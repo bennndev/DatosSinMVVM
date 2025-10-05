@@ -1,6 +1,11 @@
-package com.example.datossinmvvm.data.client
+package com.example.datossinmvvm.data.dao
 
-import androidx.room.*
+import com.example.datossinmvvm.data.model.Cliente
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface ClienteDao {

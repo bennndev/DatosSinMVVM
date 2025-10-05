@@ -1,9 +1,10 @@
-package com.example.datossinmvvm.data.user
+package com.example.datossinmvvm.data.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.datossinmvvm.data.model.User
 import java.util.List
 
 @Dao
