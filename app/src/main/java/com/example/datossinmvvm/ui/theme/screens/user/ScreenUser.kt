@@ -24,7 +24,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.room.Room
-import com.example.datossinmvvm.data.user.User
+import com.example.datossinmvvm.data.model.User
 import com.example.datossinmvvm.data.dao.UserDao
 import com.example.datossinmvvm.data.database.UserDatabase
 import kotlinx.coroutines.launch
