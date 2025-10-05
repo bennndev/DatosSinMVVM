@@ -1,4 +1,4 @@
-package com.example.datossinmvvm
+package com.example.datossinmvvm.data.user
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -10,4 +10,3 @@ data class User(
     @ColumnInfo(name = "first_name") val firstName: String?,
     @ColumnInfo(name = "last_name") val lastName: String?
 )
-

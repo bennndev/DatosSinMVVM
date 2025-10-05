@@ -1,10 +1,10 @@
-package com.example.datossinmvvm
+package com.example.datossinmvvm.data.user
 
-import androidx.room.Dao;
-import androidx.room.Insert;
-import androidx.room.Query;
-
-import java.util.List;
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+import java.util.List
 
 @Dao
 interface UserDao {
@@ -14,10 +14,9 @@ interface UserDao {
     @Insert
     suspend fun insert(user: User)
 
-    @androidx.room.Delete
+    @Delete
     suspend fun delete(user: User)
 
     @Query("SELECT * FROM User ORDER BY uid DESC LIMIT 1")
     suspend fun getLastUser(): User
 }
-
